@@ -238,6 +238,7 @@ function saveHighScore() {
   localStorage.setItem("score", JSON.stringify(scoreArr)); //writes score to my local storage
   document.getElementById("high-score-page").classList.remove("hide");
   quizEndContainer.classList.add("hide");
+  createHighscoresList();
 }
 //Gets the score from the local storage and displays it on the page.
 function createHighscoresList() {
@@ -255,7 +256,7 @@ function createHighscoresList() {
   document.getElementById("high-score-page").append(h3El, olEl);
 }
 
-createHighscoresList();
+ //the cause 
 
 submitButton.addEventListener("click", saveHighScore);
 
